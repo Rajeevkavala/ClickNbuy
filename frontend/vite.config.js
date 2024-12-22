@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server:{
     proxy:{
-      "/api/":"https://custom-e-commerce-backend.onrender.com/" || "localhost:5000" || "localhost:5001",
+      "/api/":"https://clicknbuy-backend.onrender.com",
     }
   }
 })
