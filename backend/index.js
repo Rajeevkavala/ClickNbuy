@@ -16,7 +16,7 @@ connectDB();
 const app = express();
 
 // CORS Configuration: Allow requests from your front-end domain
-const allowedOrigins = ["https://custom-e-commerce-olive.vercel.app/"]; // Replace with your front-end domain
+const allowedOrigins = ["https://clicknbuy-frontend.onrender.com"]; // Replace with your front-end domain
 const corsOptions = {
   origin: allowedOrigins, // Allow requests from this origin
   methods: ["GET", "POST", "PUT", "DELETE"], // Allow these HTTP methods
