@@ -10,8 +10,7 @@ import {
   AiOutlineAppstoreAdd,
   AiOutlineUser,
 } from "react-icons/ai";
-import {Logo1} from "../../../assets/Big Logo.svg"
-import {Logo2} from "../../../assets/Small Logo.svg" 
+
 import { FaHeart, FaBars, FaTimes } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -206,7 +205,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex justify-center mb-4">
             <img
-              src={showSidebar ? Logo1 : Logo2}
+              src={showSidebar ? "https://res.cloudinary.com/dukkntfyp/image/upload/v1734869999/Screenshot_2024-12-20_150356_prmjts.png" : "https://res.cloudinary.com/dukkntfyp/image/upload/v1734869998/Screenshot_2024-12-20_150500_gyc0ig.png"}
               alt="ClickAndBuy Logo"
               className={`${
                 showSidebar ? "h-30" : "h-30" // Set a larger height when showSidebar is false
