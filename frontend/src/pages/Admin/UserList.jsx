@@ -8,8 +8,7 @@ import {
   useUpdateUserMutation,
 } from "../../redux/api/userApiSlice";
 import { toast } from "react-hot-toast";
-import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
-import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
+
 
 const UserList = () => {
   const { data: users, refetch, isLoading, error } = useGetUsersQuery();
@@ -59,7 +58,9 @@ const UserList = () => {
 
   return (
     <div className="p-4 text-white min-h-screen">
-      <h1 className="text-2xl font-semibold mb-4 sm:text-center">Users</h1>
+      <h1 className="text-2xl font-semibold mb-4  sm:text-center">
+        Users
+      </h1>
       {isLoading ? (
         <Loader />
       ) : error ? (
@@ -69,21 +70,21 @@ const UserList = () => {
       ) : (
         <div className="flex flex-col md:flex-row md:justify-center">
           {/* <AdminMenu /> */}
-          <Table className="w-full md:w-3/4 mx-auto">
-            <Thead>
-              <Tr className="bg-gray-800">
-                <Th className="px-4 py-2 text-left">ID</Th>
-                <Th className="px-4 py-2 text-left">NAME</Th>
-                <Th className="px-4 py-2 text-left">EMAIL</Th>
-                <Th className="px-4 py-2 text-left">ADMIN</Th>
-                <Th className="px-4 py-2"></Th>
-              </Tr>
-            </Thead>
-            <Tbody>
+          <table className="w-full md:w-3/4 mx-auto table-auto">
+            <thead>
+              <tr className="bg-gray-800">
+                <th className="px-4 py-2 text-left">ID</th>
+                <th className="px-4 py-2 text-left">NAME</th>
+                <th className="px-4 py-2 text-left">EMAIL</th>
+                <th className="px-4 py-2 text-left">ADMIN</th>
+                <th className="px-4 py-2"></th>
+              </tr>
+            </thead>
+            <tbody>
               {users.map((user) => (
-                <Tr key={user._id} className="border-b border-gray-700">
-                  <Td className="px-4 py-2">{user._id}</Td>
-                  <Td className="px-4 py-2">
+                <tr key={user._id} className="border-b border-gray-700">
+                  <td className="px-4 py-2">{user._id}</td>
+                  <td className="px-4 py-2">
                     {editableUserId === user._id ? (
                       <div className="flex items-center space-x-2">
                         <input
@@ -111,8 +112,8 @@ const UserList = () => {
                         </button>
                       </div>
                     )}
-                  </Td>
-                  <Td className="px-4 py-2">
+                  </td>
+                  <td className="px-4 py-2">
                     {editableUserId === user._id ? (
                       <div className="flex items-center space-x-2">
                         <input
@@ -140,15 +141,15 @@ const UserList = () => {
                         </button>
                       </div>
                     )}
-                  </Td>
-                  <Td className="px-4 py-2">
+                  </td>
+                  <td className="px-4 py-2">
                     {user.isAdmin ? (
                       <FaCheck style={{ color: "green" }} />
                     ) : (
                       <FaTimes style={{ color: "red" }} />
                     )}
-                  </Td>
-                  <Td className="px-4 py-2">
+                  </td>
+                  <td className="px-4 py-2">
                     {!user.isAdmin && (
                       <div className="flex justify-center">
                         <button
@@ -159,11 +160,11 @@ const UserList = () => {
                         </button>
                       </div>
                     )}
-                  </Td>
-                </Tr>
+                  </td>
+                </tr>
               ))}
-            </Tbody>
-          </Table>
+            </tbody>
+          </table>
         </div>
       )}
     </div>
