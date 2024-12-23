@@ -7,6 +7,7 @@ export default defineConfig({
   server:{
     proxy:{
       "/api/":"https://clicknbuy-backend.onrender.com",
+      // "/api/":"http://localhost:5001",
     }
   }
 })
