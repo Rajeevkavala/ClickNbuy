@@ -8,7 +8,7 @@ import {
   useUpdateUserMutation,
 } from "../../redux/api/userApiSlice";
 import { toast } from "react-hot-toast";
-
+import AdminMenu from "./AdminMenu";
 
 const UserList = () => {
   const { data: users, refetch, isLoading, error } = useGetUsersQuery();
@@ -69,7 +69,7 @@ const UserList = () => {
         </Message>
       ) : (
         <div className="flex flex-col md:flex-row md:justify-center">
-          {/* <AdminMenu /> */}
+          <AdminMenu />
           <table className="w-full md:w-3/4 mx-auto table-auto">
             <thead>
               <tr className="bg-gray-800">

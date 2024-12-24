@@ -29,4 +29,24 @@
     }
     
 }
-  
+
+@media(max-width: 1000px){
+    .AllProducts{
+        margin-left: 0;
+    }
+}
+@media(max-width: 1000px){
+    .Category{
+        margin-left: 0;
+    }
+}
+@media(max-width: 1200px){
+    .product-update{
+        margin-left: 0;
+    }
+}
+
+.product-update{
+    max-width: fit-content;
+    margin-left: auto;
+}
