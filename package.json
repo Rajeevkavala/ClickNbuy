@@ -13,7 +13,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@fluidjs/multer-cloudinary": "^1.0.4",
     "@google-cloud/storage": "^7.14.0",
     "axios": "^1.7.9",
     "bcryptjs": "^2.4.3",
