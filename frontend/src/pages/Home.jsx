@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useGetProductsQuery } from "../redux/api/productApiSlice";
 import Message from "../components/Message";
-import Header from "../components/header";
+import Header from "../components/Header";
 import Product from "./Products/Product";
 const ProductSkeletonLoader = () => (
 <div className="text-white w-full sm:w-[18rem] md:w-[20rem] lg:w-[22rem] p-3 mx-auto sm:mx-3 animate-pulse">
