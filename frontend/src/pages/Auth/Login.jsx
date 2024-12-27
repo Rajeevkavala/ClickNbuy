@@ -19,7 +19,7 @@ const Login = () => {
 
   const { search } = useLocation();
   const sp = new URLSearchParams(search);
-  const redirect = sp.get("redirect") || "/home";
+  const redirect = sp.get("redirect") || "/";
 
   useEffect(() => {
     if (userInfo) {
