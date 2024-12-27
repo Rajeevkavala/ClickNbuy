@@ -11,8 +11,8 @@ import { toast } from "react-hot-toast";
 import AdminMenu from "./AdminMenu";
 
 const UserList = () => {
-  const { data: users, refetch, isLoading, error } = useGetUsersQuery();
-
+  const { data: users,isLoading,refetch, error } = useGetUsersQuery();
+  // const isLoading = true;
   const [deleteUser] = useDeleteUserMutation();
 
   const [editableUserId, setEditableUserId] = useState(null);
@@ -58,11 +58,22 @@ const UserList = () => {
 
   return (
     <div className="p-4 text-white min-h-screen">
-      <h1 className="text-2xl font-semibold mb-4  sm:text-center">
+      <h1 className="text-2xl font-semibold mb-4 sm:text-center">
         Users
       </h1>
       {isLoading ? (
-        <Loader />
+        <div className="space-y-4">
+          {/* Skeleton loading for the table rows */}
+          {[...Array(8)].map((_, index) => (
+            <div key={index} className="flex flex-col md:flex-row gap-20 md:justify-center animate-pulse">
+              <div className="w-52 h-8 bg-gray-700 rounded"></div>
+              <div className="w-32 h-8 bg-gray-700 rounded"></div>
+              <div className="w-60 h-8 bg-gray-700 rounded"></div>
+              <div className="w-16 h-8 bg-gray-700 rounded"></div>
+              <div className="w-16 h-8 bg-gray-700 rounded"></div>
+            </div>
+          ))}
+        </div>
       ) : error ? (
         <Message variant="danger">
           {error?.data?.message || error.error}

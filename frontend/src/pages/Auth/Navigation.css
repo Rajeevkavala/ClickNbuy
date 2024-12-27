@@ -1,12 +1,13 @@
 #navigation-container {
     width: 4%;
-    transition: width 0.3s ease-in-out;
+    transition: width 1s ease-in-out;
     overflow: hidden;
-     /* Hide overflowing content during transition  : */
-    -webkit-transition: width 0.3s ease-in-out;
-    -moz-transition: width 0.3s ease-in-out;
-    -ms-transition: width 0.3s ease-in-out;
-    -o-transition: width 0.3s ease-in-out;
+    /*Hideoverflowingcontentduringtransition:;
+    */-webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -ms-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    -webkit-transition: width 1s ease-in-out;
 }
   
   #navigation-container:hover {

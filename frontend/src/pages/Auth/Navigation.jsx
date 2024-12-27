@@ -10,7 +10,7 @@ import {
   AiOutlineAppstoreAdd,
   AiOutlineUser,
 } from "react-icons/ai";
-
+import FavoritesCount from "../Products/FavoritesCount";
 import { FaHeart, FaBars, FaTimes } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -22,6 +22,7 @@ import { toast } from "react-hot-toast";
 
 const Navigation = () => {
   const { userInfo } = useSelector((state) => state.auth);
+  const {cartItems} = useSelector((state) => state.cart);
   const [showSidebar, setShowSidebar] = useState(false); // For desktop hover effect
   const [showMobileMenu, setShowMobileMenu] = useState(false); // For mobile menu
   const dispatch = useDispatch();
@@ -64,7 +65,7 @@ const Navigation = () => {
         <div className="flex flex-col space-y-8 text-2xl text-center overflow-y-auto max-h-full">
           {/* Links */}
           <Link
-            to="/home"
+            to="/"
             onClick={closeMobileMenu}
             className="flex items-center justify-center hover:bg-blue-500 py-2 rounded-lg"
           >
@@ -215,7 +216,7 @@ const Navigation = () => {
 
           {/* Links */}
           <Link
-            to="/home"
+            to="/"
             className="flex items-center transition-transform transform hover:translate-x-2"
           >
             <AiOutlineHome size={26} />
@@ -233,6 +234,15 @@ const Navigation = () => {
             className="flex items-center transition-transform transform hover:translate-x-2"
           >
             <AiOutlineShoppingCart size={26} />
+            <div className="absolute bottom-4 left-4">
+              {cartItems.length > 0 && (
+                <span>
+                  <div className="px-1 py-0 text-sm text-white bg-pink-500 rounded-full">
+                    {cartItems.reduce((acc, item) => acc + item.qty, 0)}
+                  </div>
+                </span>
+              )}
+            </div>
             {showSidebar && <span className="ml-4">CART</span>}
           </Link>
           <Link
@@ -240,7 +250,9 @@ const Navigation = () => {
             className="flex items-center transition-transform transform hover:translate-x-2"
           >
             <FaHeart size={20} />
+            <FavoritesCount/>
             {showSidebar && <span className="ml-4">FAVORITES</span>}
+            
           </Link>
         </div>
 

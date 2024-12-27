@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*{
+    scroll-behavior: smooth;
+}
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -49,4 +52,74 @@
 .product-update{
     max-width: fit-content;
     margin-left: auto;
+}
+
+.AllProducts{
+    width: auto;
+}
+
+.product-list{
+    width: auto;
+}
+
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hamburger .line {
+    background-color: white;
+    height: 3px;
+    border-radius: 2px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hamburger.open .line:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+  }
+  
+  .hamburger.open .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open .line:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+  }
+
+@media (max-width: 1000px) {
+   .Favorites{
+    margin-left: 0;
+   }
+}
+@media (max-width: 1000px) {
+   .Top-Featured-Products{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+   }
+   .Special-Products {
+    margin-left: 0rem;
+   }
+   .HeartIcon{
+       margin-left: 1000px;
+   }
+}
+@media (max-width: 700px) {
+    .sketon-loading-for-Special-Products{
+        margin-left: 1rem;
+    }
+    .button-skelton{
+        width: 20%;
+        margin-right: 10px;
+    }
+    .ProductSkeletonLoader{
+        margin-left: 1rem;
+    }
+    .ProductTabs{
+        margin-left: 0.5rem;
+    }
 }
