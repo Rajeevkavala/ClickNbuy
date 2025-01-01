@@ -1,14 +1,21 @@
+Here's the updated `README.md` reflecting the completion of the new features and deployment:
 
 ```markdown
 # Custom E-Commerce
 
-This repository contains the setup for a MERN stack-based e-commerce project, designed to demonstrate a full-stack application with user and admin functionalities. The project integrates a responsive frontend, a powerful backend, and a robust database.
+This repository contains the setup for a MERN stack-based e-commerce project, designed to
+demonstrate a full-stack application with user and admin functionalities.
+The project integrates a responsive frontend, a powerful backend, and a robust database,
+with payment functionality using PayPal and partial integration of Razorpay.
 
 ---
 
 ## 📋 Summary
 
-This project aims to provide a seamless e-commerce experience by implementing user authentication, an admin panel for product and user management, and interactive pages for shopping, reviews, and more.
+This project aims to provide a seamless e-commerce experience by implementing user authentication,
+an admin panel for product and user management, and interactive pages for shopping, reviews,
+and more. Additionally, the project supports payment integration via PayPal (fully implemented)
+and Razorpay (partially implemented).
 
 ### Highlights
 
@@ -17,6 +24,13 @@ This project aims to provide a seamless e-commerce experience by implementing us
 - **Home Page Features:** Showcases top-rated products and allows users to add and view reviews.
 - **Shop, Favorites, and Cart Pages:** Functional pages for browsing, saving, and purchasing products.
 - **Admin Panel:** Includes CRUD operations for product management and user administration.
+- **Payment Integration:**  
+  - **💳 PayPal:** Fully integrated payment gateway.
+  - **💸 Razorpay:** Partial integration for payments.
+- **Enhanced Product Features:** Includes filtering and sorting options for products.
+- **User Profiles:** Users can track their orders and view their order history.
+- **Deployment:**  
+  - **Frontend and Backend:** Deployed on Render for seamless cloud hosting.
 
 ---
 
@@ -34,9 +48,20 @@ This project aims to provide a seamless e-commerce experience by implementing us
 - **🏠 Home Page:**
   - **Top Featured Products:** Displays products based on ratings and reviews.
   - **User Reviews:** Users can add and view reviews for products.
-- **🛍️ Shop Page:** Lists all available products with filtering options.
+- **🛍️ Shop Page:** Lists all available products with filtering and sorting options.
 - **❤️ Favorites Page:** Allows users to save and view favorite products.
-- **🛒 Cart Page:** Displays selected items for purchase, with options to edit quantities or proceed to checkout.
+- **🛒 Cart Page:** Displays selected items for purchase, with options to edit quantities
+  or proceed to checkout.
+
+### **💳 Payment Integration**
+- **PayPal:** Fully integrated payment gateway, allowing users to complete transactions securely.
+- **Razorpay:** Partial integration, working in progress for smoother payment experience.
+
+### **👤 User Profiles**
+- Users can track their past orders and view their order history through a personal profile page.
+
+### **🛍️ Enhanced Product Features**
+- Filtering and sorting options have been added to the shop page to improve the browsing experience.
 
 ---
 
@@ -72,6 +97,7 @@ To run this project locally, follow the steps below:
 4. Set up environment variables (`.env`):
    - `MONGODB_URI`: MongoDB connection string.
    - `JWT_SECRET`: Secret key for JWT authentication.
+   - Payment gateway keys for PayPal and Razorpay.
 
 5. Start the backend and frontend servers:
 
@@ -114,22 +140,23 @@ To run this project locally, follow the steps below:
 - **Frontend:** React, Tailwind CSS
 - **Backend:** Node.js, Express.js, JWT Authentication
 - **Database:** MongoDB (Mongoose)
+- **Payment Gateway:** PayPal (Fully Integrated), Razorpay (Partial Integration)
 - **Version Control:** Git, GitHub
 
 ---
 
 ## 🎯 Next Steps
 
-- Enhance product features with filtering and sorting options.
-- Implement a payment gateway for checkout.
-- Add user profiles for order tracking and history.
-- Deploy the project on cloud platforms like Vercel or AWS.
+- Finalize Razorpay integration for complete payment functionality.
+- Enhance product features with additional filtering and sorting options.
+- Add more user profile customization features (e.g., password change, address management).
+- Deploy the project on cloud platforms like Vercel or AWS for better scalability and accessibility.
 
 ---
 
-## 📜 License
+## 🚀 Deployment
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
+- **Frontend:** Deployed on Render ([Frontend-url:](https://clicknbuy-frontend.onrender.com))
+- **Backend:** Deployed on Render ([backend-url:](https://clicknbuy-backend.onrender.com))
 
-This `README.md` provides a professional, engaging overview of your project with all implemented features, a clear structure, and actionable next steps. Let me know if you need further modifications! 🚀
+---
