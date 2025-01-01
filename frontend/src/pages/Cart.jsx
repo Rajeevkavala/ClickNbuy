@@ -26,9 +26,9 @@ const Cart = () => {
 
   return (
     <>
-      <div className="container text-white h-[100%] flex justify-around items-start flex wrap mx-auto mt-8">
+      <div className="container text-white h-[100vh] flex justify-around items-start flex wrap mx-auto mt-8">
         {cartItems.length === 0 ? (
-          <div>
+          <div className="h-[100vh] bg-black">
             Your cart is empty <Link to="/shop">Go To Shop</Link>
           </div>
         ) : (
